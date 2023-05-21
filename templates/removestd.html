@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="{{url_for('static',filename='bootstrap.min.css')}}" rel="stylesheet">
+    <script src="{{url_for('static',filename='bootstrap.bundle.js')}}"></script>
+    <style>
+        fieldset{
+            border:3px solid black;
+            border-radius: 5px;
+            width:25%;
+            padding:10px;
+            margin-top: 15%;
+            margin:50px 0 0 585px;
+            color: black;
+        }
+        body{
+            background-image: url("{{url_for('static',filename='images/home-bg.jpg')}}");
+            background-attachment:fixed;
+            background-position:center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <!-- <h1>Student Details</h1>
+    <form action="/removestd" method="POST">
+        <fieldset>
+            <legend>Student Rollno</legend>
+            <input type="text" name="rollno"/><br><br>
+            <input type="submit" value="Submit"/>
+        </fieldset>
+    </form> -->
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-info">
+        <div class="container-fluid">
+         
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="/">Home</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Studens Details
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="/add">Add Student</a></li>
+                  <li><a class="dropdown-item" href="/display">Student View</a></li>
+                  <li><a class="dropdown-item" href="/remove">Student Delete</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/search">Google</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/youtube">Youtube</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/info">Info</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/video">Audio Converter</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">About us</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Contact</a>
+              </li>
+            </ul>
+            <form class="d-flex">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+
+    <form action="/removestd" method="POST">
+        <fieldset>
+            <legend>Student Rollno</legend>
+        <div class="mb-3">
+          <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="rollno">
+          <div id="emailHelp" class="form-text">Enter Student Rollno</div>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+        </fieldset>
+      </form>
+</body>
+</html>
